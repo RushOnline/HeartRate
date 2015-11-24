@@ -31,13 +31,16 @@ void setup() {
   // pinMode(13, OUTPUT);  // Setup LED
 }
 
+char buffer[10];
+
 void loop() {
 
   if ( NO_LEADOFF ) {
+    snprintf(buffer, sizeof(buffer), "%03X", analogRead(A0));
     // send the value of analog input 0:
-    Serial.println(analogRead(A0));
+    Serial.println(buffer);
   } else {
-    Serial.println('!');
+    Serial.println('---');
   }
   
   //Wait for a bit to keep serial data from saturating
