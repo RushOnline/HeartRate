@@ -15,7 +15,7 @@
 
 void setup() {
   // initialize the serial communication:
-  Serial.begin(57600);
+  Serial.begin(MONITOR_BAUDRATE);
   
 #if (VCC == 5)
   // HRM Shield powered with 3.3V source, Arduino with 5.
@@ -40,7 +40,7 @@ void loop() {
     // send the value of analog input 0:
     Serial.println(buffer);
   } else {
-    Serial.println('---');
+    Serial.println("---");
   }
   
   //Wait for a bit to keep serial data from saturating
