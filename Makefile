@@ -1,5 +1,6 @@
 export BOARD_TAG		= pro
-export BOARD_SUB		= 16MHzatmega328 # 8MHzatmega328
+#export BOARD_SUB		= 16MHzatmega328
+export BOARD_SUB		= 8MHzatmega328
 export ARCHITECTURE		= avr
 
 export ARDUINO_DIR		= $(CURDIR)/../Arduino
